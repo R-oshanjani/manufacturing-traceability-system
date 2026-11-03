@@ -1,0 +1,1179 @@
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f3f4f6;
+  color: #111827;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* ============================================================
+   APP
+   ============================================================ */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.top-header {
+  width: 100%;
+  background: #17202a;
+  color: white;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 16px 32px;
+
+  text-align: center;
+}
+
+.header-content h1 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.header-content p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+
+/* ============================================================
+   MAIN DASHBOARD
+   ============================================================ */
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 28px 36px 50px;
+}
+
+
+/* ============================================================
+   DASHBOARD TITLE
+   ============================================================ */
+
+.dashboard-title {
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+
+.dashboard-title h2 {
+  margin: 0 0 6px;
+
+  color: #17202a;
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dashboard-title p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   METRICS GRID
+   ============================================================ */
+
+.metrics-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 26px;
+}
+
+
+/* ============================================================
+   METRIC CARD
+   ============================================================ */
+
+.metric-card {
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06);
+
+  border: 1px solid #e5e7eb;
+}
+
+.metric-card span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.metric-card strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.danger-card {
+  border-left: 4px solid #dc2626;
+}
+
+.danger-card strong {
+  color: #b91c1c;
+}
+
+.warning-card {
+  border-left: 4px solid #f59e0b;
+}
+
+.warning-card strong {
+  color: #b45309;
+}
+
+
+/* ============================================================
+   QUALITY SUMMARY GRID
+   ============================================================ */
+
+.quality-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 26px;
+}
+
+
+/* ============================================================
+   SUMMARY CARD
+   ============================================================ */
+
+.summary-card {
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06);
+
+  border: 1px solid #e5e7eb;
+}
+
+.summary-card h2 {
+  margin: 0 0 14px;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   STAT ROW
+   ============================================================ */
+
+.stat-row {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 42px;
+
+  border-bottom:
+    1px solid #e5e7eb;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-row span {
+  color: #374151;
+
+  font-size: 13px;
+}
+
+.stat-row strong {
+  color: #111827;
+
+  font-size: 15px;
+}
+
+.stat-row.critical span,
+.stat-row.critical strong {
+  color: #dc2626;
+}
+
+.stat-row.high span,
+.stat-row.high strong {
+  color: #ea580c;
+}
+
+
+/* ============================================================
+   SEARCH CARD
+   ============================================================ */
+
+.search-card {
+  width: 100%;
+
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 24px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06);
+
+  border: 1px solid #e5e7eb;
+}
+
+.search-card h2 {
+  margin: 0 0 15px;
+
+  color: #17202a;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.search-description {
+  max-width: 800px;
+
+  margin: -5px auto 18px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  text-align: center;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   SEARCH ROW
+   ============================================================ */
+
+.search-row {
+  width: 100%;
+
+  display: flex;
+
+  gap: 10px;
+}
+
+.search-row input {
+  flex: 1;
+
+  width: 100%;
+
+  min-width: 0;
+
+  height: 44px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid #cbd5e1;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: white;
+
+  color: #17202a;
+
+  font-size: 14px;
+}
+
+.search-row input::placeholder {
+  color: #94a3b8;
+}
+
+.search-row input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.search-row button {
+  flex-shrink: 0;
+
+  height: 44px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.search-row button:hover {
+  background: #1d4ed8;
+}
+
+.search-row button:active {
+  transform: translateY(1px);
+}
+
+.search-row button:disabled {
+  background: #93c5fd;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   ERROR MESSAGE
+   ============================================================ */
+
+.error-message {
+  margin-top: 14px;
+
+  padding: 12px 14px;
+
+  border-radius: 6px;
+
+  background: #fef2f2;
+
+  border:
+    1px solid #fecaca;
+
+  color: #b91c1c;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   TRACE SECTION
+   ============================================================ */
+
+.trace-section {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   SECTION HEADING
+   ============================================================ */
+
+.section-heading {
+  background: white;
+
+  border-radius: 10px 10px 0 0;
+
+  padding: 20px 24px 5px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-bottom: none;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #17202a;
+
+  font-size: 19px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   ORDER SUMMARY
+   ============================================================ */
+
+.order-summary {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  background: white;
+
+  padding: 20px 24px 24px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-top: none;
+
+  border-radius: 0 0 10px 10px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.order-summary > div {
+  text-align: center;
+}
+
+.order-summary span,
+.lot-summary span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+.order-summary strong,
+.lot-summary strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   DATA CARD
+   ============================================================ */
+
+.data-card {
+  width: 100%;
+
+  background: white;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  padding: 24px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.data-card h2 {
+  margin: 0 0 18px;
+
+  color: #17202a;
+
+  font-size: 18px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  min-width: 700px;
+
+  border-collapse: collapse;
+
+  background: white;
+}
+
+thead {
+  background: #f1f5f9;
+}
+
+th {
+  padding: 13px 12px;
+
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  border-bottom:
+    1px solid #cbd5e1;
+}
+
+td {
+  padding: 12px;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  border-bottom:
+    1px solid #e5e7eb;
+
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+.lot-cell {
+  color: #1d4ed8;
+
+  font-weight: 600;
+}
+
+.empty-cell {
+  padding: 30px;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   INSPECTION CARD
+   ============================================================ */
+
+.inspection-card {
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  padding: 16px;
+
+  margin-bottom: 14px;
+
+  background: #fafafa;
+}
+
+.inspection-card:last-child {
+  margin-bottom: 0;
+}
+
+.inspection-header {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr;
+
+  gap: 15px;
+
+  padding-bottom: 14px;
+
+  border-bottom:
+    1px solid #e5e7eb;
+}
+
+.inspection-header span,
+.defect-item span,
+.downstream-header span,
+.lot-defect span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.3px;
+}
+
+.inspection-header strong,
+.defect-item strong,
+.downstream-header strong,
+.lot-defect strong {
+  color: #111827;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.status-pass {
+  color: #15803d !important;
+}
+
+.status-fail {
+  color: #dc2626 !important;
+}
+
+
+/* ============================================================
+   DEFECT LIST
+   ============================================================ */
+
+.defect-list {
+  padding-top: 14px;
+}
+
+.defect-item {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 1fr 0.8fr 0.8fr 1.2fr 1fr;
+
+  gap: 15px;
+
+  padding: 14px;
+
+  margin-bottom: 8px;
+
+  background: white;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 6px;
+}
+
+.defect-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   LOT SUMMARY
+   ============================================================ */
+
+.lot-summary {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 18px;
+
+  padding: 24px;
+
+  background: white;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lot-summary > div {
+  text-align: center;
+}
+
+
+/* ============================================================
+   DOWNSTREAM ORDER
+   ============================================================ */
+
+.downstream-order {
+  padding: 18px;
+
+  margin-bottom: 14px;
+
+  background: #f8fafc;
+
+  border:
+    1px solid #e2e8f0;
+
+  border-radius: 8px;
+}
+
+.downstream-order:last-child {
+  margin-bottom: 0;
+}
+
+.downstream-header {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr;
+
+  gap: 18px;
+
+  padding-bottom: 15px;
+
+  border-bottom:
+    1px solid #e2e8f0;
+}
+
+
+/* ============================================================
+   LOT INSPECTIONS
+   ============================================================ */
+
+.lot-inspections {
+  padding-top: 16px;
+}
+
+.lot-inspections h3 {
+  margin: 0 0 12px;
+
+  color: #334155;
+
+  font-size: 14px;
+}
+
+.lot-inspection {
+  padding: 14px;
+
+  margin-bottom: 10px;
+
+  background: white;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 7px;
+}
+
+.lot-inspection:last-child {
+  margin-bottom: 0;
+}
+
+.inspection-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid #e5e7eb;
+
+  color: #475569;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   LOT DEFECT
+   ============================================================ */
+
+.lot-defect {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 1fr 0.8fr 1.2fr 1fr;
+
+  gap: 15px;
+
+  padding: 14px 0 0;
+}
+
+
+/* ============================================================
+   EMPTY STATES
+   ============================================================ */
+
+.empty-state {
+  padding: 30px;
+
+  color: #64748b;
+
+  background: #f8fafc;
+
+  border:
+    1px dashed #cbd5e1;
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+.no-defects {
+  padding-top: 15px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.loading-screen {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #f3f4f6;
+}
+
+.loading-box {
+  padding: 20px 30px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+
+  color: #334155;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 18px;
+
+  background: #17202a;
+
+  color: #cbd5e1;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   RESPONSIVE - LARGE TABLETS
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+  .dashboard-container {
+    padding:
+      25px 25px 45px;
+  }
+
+  .metrics-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+  .defect-item {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .lot-defect {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .metrics-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .order-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .lot-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .downstream-header {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .inspection-header {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+  .header-content {
+    padding:
+      14px 18px;
+  }
+
+  .header-content h1 {
+    font-size: 18px;
+  }
+
+  .header-content p {
+    font-size: 11px;
+  }
+
+  .dashboard-container {
+    padding:
+      20px 14px 35px;
+  }
+
+  .dashboard-title h2 {
+    font-size: 20px;
+  }
+
+  .metrics-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .quality-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .search-card {
+    padding: 18px;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .search-row button {
+    width: 100%;
+  }
+
+  .order-summary {
+    grid-template-columns:
+      1fr;
+
+    padding: 18px;
+  }
+
+  .lot-summary {
+    grid-template-columns:
+      1fr;
+
+    padding: 18px;
+  }
+
+  .inspection-header {
+    grid-template-columns:
+      1fr;
+  }
+
+  .defect-item {
+    grid-template-columns:
+      1fr;
+  }
+
+  .downstream-header {
+    grid-template-columns:
+      1fr;
+  }
+
+  .lot-defect {
+    grid-template-columns:
+      1fr;
+  }
+
+  .inspection-line {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 6px;
+  }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+  .dashboard-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .metric-card {
+    min-height: 95px;
+
+    padding: 16px;
+  }
+
+  .metric-card strong {
+    font-size: 22px;
+  }
+
+}
