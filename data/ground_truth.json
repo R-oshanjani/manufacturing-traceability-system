@@ -1,0 +1,41 @@
+{
+  "seed": 20261022,
+  "description": "Ground-truth labels for deliberate negative and anomaly scenarios in the manufacturing traceability dataset.",
+  "edge_cases": [
+    {
+      "issue_id": "EDGE-001",
+      "issue_type": "DEFECT_NONEXISTENT_MATERIAL_LOT",
+      "description": "Defect references a material lot that does not exist.",
+      "expected_decision": "Traceability validation must flag the broken material-lot reference.",
+      "severity": "HIGH"
+    },
+    {
+      "issue_id": "EDGE-002",
+      "issue_type": "BOM_MATERIAL_NOT_CONSUMED",
+      "description": "A material required by the BOM is not recorded as consumed for the production order.",
+      "expected_decision": "Material reconciliation must flag the missing consumption.",
+      "severity": "HIGH"
+    },
+    {
+      "issue_id": "EDGE-003",
+      "issue_type": "CAPA_CLOSED_BEFORE_VERIFICATION",
+      "description": "A corrective action is marked closed before verification is completed.",
+      "expected_decision": "CAPA lifecycle validation must reject or flag the premature closure.",
+      "severity": "HIGH"
+    },
+    {
+      "issue_id": "EDGE-004",
+      "issue_type": "DEFECT_QUANTITY_EXCEEDS_INSPECTED",
+      "description": "The defect quantity exceeds the quantity inspected.",
+      "expected_decision": "Inspection/defect arithmetic validation must flag the inconsistent quantity.",
+      "severity": "CRITICAL"
+    },
+    {
+      "issue_id": "EDGE-005",
+      "issue_type": "TRACEABILITY_CHAIN_BREAK",
+      "description": "A deliberate break is introduced in the traceability chain.",
+      "expected_decision": "End-to-end traceability validation must identify the broken relationship.",
+      "severity": "CRITICAL"
+    }
+  ]
+}
